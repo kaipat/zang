@@ -1,0 +1,10 @@
+.zangCanvas {
+	background-color: transparent;
+	width: 300rpx;
+	height: 600rpx;
+	border: 0;
+	position: absolute;
+	bottom: 80rpx;
+	right: 0;
+	z-index: -1;
+}
