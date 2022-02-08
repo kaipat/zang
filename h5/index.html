@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .zang-click {
+      width: 48px;
+      height: 48px;
+      position: fixed;
+      background-color: #8c8c8c;
+      bottom: 100px;
+      left: 100px
+    }
+    .zang-click canvas {
+      position: absolute;
+      bottom: 48px;
+      left:50%;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+<body>
+  <script src="./zang.js"></script>
+  <div class="zang-click" onclick="handleclick()">
+    <canvas id="zangCanvas" width="200" height="600" style="width:100px;height:300px;"></canvas>
+  </div>
+  <script>
+    function handleclick() {
+      zang.start();
+    }
+    const zang = new Zang({
+      canvas_id: 'zangCanvas',
+      icons: [
+        'https://static1.weizan.cn/zhibo/images/flyicoshop/0-1.png?v=1642642540972',
+        'https://static1.weizan.cn/zhibo/images/flyicoshop/0-2.png?v=1642642540972',
+        'https://static1.weizan.cn/zhibo/images/flyicoshop/0-3.png?v=1642642540972',
+        'https://static1.weizan.cn/zhibo/images/flyicoshop/0-4.png?v=1642642540972',
+        'https://static1.weizan.cn/zhibo/images/flyicoshop/0-5.png?v=1642642540972'
+      ],
+    });
+    console.log(zang)
+    setInterval(()=>{
+      zang.start();
+    },0);
+  </script>
+</body>
+</html>
